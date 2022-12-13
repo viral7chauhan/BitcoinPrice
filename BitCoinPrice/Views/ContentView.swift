@@ -17,9 +17,9 @@ struct ContentView: View {
                 TitleView(isLoading: $viewModel.isLoading)
 
                 ReadingView(isLoading: $viewModel.isLoading, price: $viewModel.price)
+                    .padding()
 
                 Button("Refresh Price") {
-                    print("Button action tapped")
                     Task {
                         await viewModel.loadPrice()
                     }
