@@ -24,7 +24,7 @@ final class PriceLoader {
         let requeset = URLRequest(url: url)
         do {
             let (data, response) = try await client.data(for: requeset)
-            guard let httpResponse = response as? HTTPURLResponse, httpResponse.isOK else {
+            guard response.isOK else {
                 throw Error.invalidData
             }
             let jsonDecoder = JSONDecoder()
@@ -39,8 +39,12 @@ final class PriceLoader {
     }
 }
 
-private extension HTTPURLResponse {
+private extension URLResponse {
     var isOK: Bool {
-        statusCode == 200
+        guard let httpResponse = self as? HTTPURLResponse,
+                httpResponse.statusCode == 200 else {
+            return false
+        }
+        return true
     }
 }

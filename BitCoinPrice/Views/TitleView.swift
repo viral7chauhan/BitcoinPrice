@@ -17,12 +17,16 @@ struct TitleView: View {
                 .frame(width: 60, height: 60)
                 .padding()
                 .foregroundColor(.activeColor)
-            Text("Hey there! The current price of bitcoin is \(isLoading ? "loading.." : "below") ")
+            Text("Hey there! The current price of bitcoin is \(suffix)")
                 .multilineTextAlignment(.center)
                 .font(.title)
                 .fontWeight(.semibold)
                 .padding(.horizontal, 20)
         }
+    }
+
+    var suffix: String {
+        isLoading ? "loading.." : "below"
     }
 }
 

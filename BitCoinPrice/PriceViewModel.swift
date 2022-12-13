@@ -8,7 +8,8 @@
 import Foundation
 
 final class PriceViewModel: ObservableObject {
-    @Published var priceModel: Response?
+    private var priceModel: Response?
+
     @Published var isLoading = false
     @Published var price: String = ""
 
