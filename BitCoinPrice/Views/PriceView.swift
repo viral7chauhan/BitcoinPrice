@@ -14,25 +14,23 @@ struct PriceView: View {
         ZStack {
             Color.backgroundColor.ignoresSafeArea()
             VStack(spacing: 100) {
-                TitleView(isLoading: $viewModel.isLoading)
+                TitleView(isLoading: viewModel.isLoading)
 
-                ReadingView(isLoading: $viewModel.isLoading, price: $viewModel.price)
+                ReadingView(isLoading: viewModel.isLoading, price: viewModel.price)
                     .padding()
 
-                RefreshButtonView(isLoading: $viewModel.isLoading) {
+                RefreshButtonView(isLoading: viewModel.isLoading) {
                     Task {
                         await viewModel.loadPrice()
                     }
                 }
             }
         }
-
         .onAppear {
             Task {
                 await viewModel.loadPrice()
             }
         }
-
     }
 }
 

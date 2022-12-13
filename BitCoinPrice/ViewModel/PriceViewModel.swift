@@ -29,6 +29,7 @@ final class PriceViewModel: ObservableObject {
     @MainActor
     func loadPrice() async {
         isLoading = true
+        try! await Task.sleep(until: .now + .seconds(3), clock: .continuous)
         priceModel = await loader.loadPrice()
         price = priceInString ?? ""
         isLoading = false

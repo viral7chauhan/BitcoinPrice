@@ -9,8 +9,8 @@ import SwiftUI
 
 struct ReadingView: View {
 
-    @Binding var isLoading: Bool
-    @Binding var price: String
+    var isLoading: Bool
+    var price: String
 
     var body: some View {
         VStack(spacing: 4) {
@@ -26,6 +26,6 @@ struct ReadingView: View {
 
 struct ReadingView_Previews: PreviewProvider {
     static var previews: some View {
-        ReadingView(isLoading: .constant(false), price: .constant("16567"))
+        ReadingView(isLoading: false, price: "464654")
     }
 }

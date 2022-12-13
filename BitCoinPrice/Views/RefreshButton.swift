@@ -9,9 +9,9 @@ import SwiftUI
 
 struct RefreshButtonView: View {
 
-    var isLoading: Bool
-    var action: () -> Void
+    @Binding var isLoading: Bool
 
+    var action: () -> Void
     var body: some View {
         Button {
             print("Refresh Clicked")
@@ -33,6 +33,6 @@ struct RefreshButtonView: View {
 
 struct RefreshButton_Previews: PreviewProvider {
     static var previews: some View {
-        RefreshButtonView(isLoading: false, action: {})
+        RefreshButtonView(isLoading: .constant(false), action: {})
     }
 }

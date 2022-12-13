@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct TitleView: View {
-    @Binding var isLoading: Bool
+    var isLoading: Bool
 
     var body: some View {
         VStack(alignment: .center) {
@@ -32,6 +32,6 @@ struct TitleView: View {
 
 struct TitleView_Previews: PreviewProvider {
     static var previews: some View {
-        TitleView(isLoading: .constant(true))
+        TitleView(isLoading: true)
     }
 }
