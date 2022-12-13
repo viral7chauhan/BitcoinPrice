@@ -19,19 +19,11 @@ struct PriceView: View {
                 ReadingView(isLoading: $viewModel.isLoading, price: $viewModel.price)
                     .padding()
 
-                Button("Refresh Price") {
+                RefreshButtonView(isLoading: $viewModel.isLoading) {
                     Task {
                         await viewModel.loadPrice()
                     }
                 }
-                .foregroundColor(.white)
-                .font(.system(size: 20))
-                .padding()
-                .frame(minWidth: 100, maxWidth: .infinity, alignment: .center)
-                .background(viewModel.isLoading ? Color.disableColor : Color.activeColor)
-                .clipShape(Capsule())
-                .padding(.horizontal, 30)
-                .shadow(radius: 2)
             }
         }
 
@@ -53,19 +45,5 @@ struct ContentView_Previews: PreviewProvider {
         )
 
         PriceView(viewModel: viewModel)
-    }
-}
-
-struct CapsuleButton: ButtonStyle {
-    func makeBody(configuration: Configuration) -> some View {
-        configuration.label
-            .foregroundColor(.white)
-            .font(.system(size: 20))
-            .padding()
-            .frame(minWidth: 100, maxWidth: .infinity, alignment: .center)
-            .background(Color.activeColor)
-            .clipShape(Capsule())
-            .padding(.horizontal, 30)
-            .shadow(radius: 2)
     }
 }
