@@ -8,13 +8,16 @@
 import SwiftUI
 
 struct TitleView: View {
+    @Binding var isLoading: Bool
+
     var body: some View {
         VStack(alignment: .center) {
-            Image(systemName: "heart")
+            Image(systemName: "dollarsign.circle.fill")
                 .resizable()
                 .frame(width: 60, height: 60)
                 .padding()
-            Text("Hey there! The current price of bitcoin is below")
+                .foregroundColor(.activeColor)
+            Text("Hey there! The current price of bitcoin is \(isLoading ? "loading.." : "below") ")
                 .multilineTextAlignment(.center)
                 .font(.title)
                 .fontWeight(.semibold)
@@ -25,6 +28,6 @@ struct TitleView: View {
 
 struct TitleView_Previews: PreviewProvider {
     static var previews: some View {
-        TitleView()
+        TitleView(isLoading: .constant(true))
     }
 }

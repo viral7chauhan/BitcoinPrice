@@ -14,6 +14,9 @@
 		E09402592948910E00404CF0 /* ReadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09402582948910E00404CF0 /* ReadingView.swift */; };
 		E094025B294899A000404CF0 /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E094025A294899A000404CF0 /* TitleView.swift */; };
 		E094025E29489F0E00404CF0 /* Color+helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E094025D29489F0E00404CF0 /* Color+helpers.swift */; };
+		E09402602948AE8300404CF0 /* PriceLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E094025F2948AE8300404CF0 /* PriceLoader.swift */; };
+		E09402622948B1BE00404CF0 /* PriceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09402612948B1BE00404CF0 /* PriceModel.swift */; };
+		E09402642948B48600404CF0 /* PriceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09402632948B48600404CF0 /* PriceViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +28,9 @@
 		E09402582948910E00404CF0 /* ReadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingView.swift; sourceTree = "<group>"; };
 		E094025A294899A000404CF0 /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
 		E094025D29489F0E00404CF0 /* Color+helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+helpers.swift"; sourceTree = "<group>"; };
+		E094025F2948AE8300404CF0 /* PriceLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceLoader.swift; sourceTree = "<group>"; };
+		E09402612948B1BE00404CF0 /* PriceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceModel.swift; sourceTree = "<group>"; };
+		E09402632948B48600404CF0 /* PriceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,11 +63,14 @@
 		E09402482948905500404CF0 /* BitCoinPrice */ = {
 			isa = PBXGroup;
 			children = (
+				E09402632948B48600404CF0 /* PriceViewModel.swift */,
+				E094025F2948AE8300404CF0 /* PriceLoader.swift */,
 				E094025C29489EFE00404CF0 /* Extensions */,
 				E0940257294890FB00404CF0 /* Views */,
 				E09402492948905500404CF0 /* BitCoinPriceApp.swift */,
 				E094024D2948905600404CF0 /* Assets.xcassets */,
 				E094024F2948905600404CF0 /* Preview Content */,
+				E09402612948B1BE00404CF0 /* PriceModel.swift */,
 			);
 			path = BitCoinPrice;
 			sourceTree = "<group>";
@@ -166,6 +175,9 @@
 				E094024C2948905500404CF0 /* ContentView.swift in Sources */,
 				E094024A2948905500404CF0 /* BitCoinPriceApp.swift in Sources */,
 				E094025B294899A000404CF0 /* TitleView.swift in Sources */,
+				E09402622948B1BE00404CF0 /* PriceModel.swift in Sources */,
+				E09402602948AE8300404CF0 /* PriceLoader.swift in Sources */,
+				E09402642948B48600404CF0 /* PriceViewModel.swift in Sources */,
 				E094025E29489F0E00404CF0 /* Color+helpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

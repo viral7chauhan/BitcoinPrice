@@ -8,11 +8,15 @@
 import SwiftUI
 
 struct ReadingView: View {
+
+    @Binding var isLoading: Bool
+    @Binding var price: String
+
     var body: some View {
         VStack(spacing: 4) {
             Text("Price")
                 .font(.title2)
-            Text("$16,394")
+            Text(isLoading ? "loading..." : "$\(price)")
                 .font(.largeTitle)
                 .fontWeight(.bold)
         }
@@ -22,6 +26,6 @@ struct ReadingView: View {
 
 struct ReadingView_Previews: PreviewProvider {
     static var previews: some View {
-        ReadingView()
+        ReadingView(isLoading: .constant(false), price: .constant("16567"))
     }
 }

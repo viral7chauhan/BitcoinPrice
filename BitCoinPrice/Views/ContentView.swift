@@ -8,18 +8,36 @@
 import SwiftUI
 
 struct ContentView: View {
+    @ObservedObject var viewModel = PriceViewModel(loader: PriceLoader())
+
     var body: some View {
         ZStack {
             Color.backgroundColor.ignoresSafeArea()
             VStack(spacing: 100) {
-                TitleView()
+                TitleView(isLoading: $viewModel.isLoading)
 
-                ReadingView()
+                ReadingView(isLoading: $viewModel.isLoading, price: $viewModel.price)
 
                 Button("Refresh Price") {
-                    print("action")
+                    print("Button action tapped")
+                    Task {
+                        await viewModel.loadPrice()
+                    }
                 }
-                .buttonStyle(CapsuleButton())
+                .foregroundColor(.white)
+                .font(.system(size: 20))
+                .padding()
+                .frame(minWidth: 100, maxWidth: .infinity, alignment: .center)
+                .background(viewModel.isLoading ? Color.disableColor : Color.activeColor)
+                .clipShape(Capsule())
+                .padding(.horizontal, 30)
+                .shadow(radius: 2)
+            }
+        }
+
+        .onAppear {
+            Task {
+                await viewModel.loadPrice()
             }
         }
 
