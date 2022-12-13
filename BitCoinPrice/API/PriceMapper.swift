@@ -9,9 +9,13 @@ import Foundation
 
 // Handle parsing and return model
 enum PriceMapper {
+    enum Error: Swift.Error {
+        case invalidData
+    }
+
     static func map(_ data: Data, from response: URLResponse) throws -> Response {
         guard response.isOK else {
-            throw PriceFeedLoader.Error.invalidData
+            throw Error.invalidData
         }
         let jsonDecoder = JSONDecoder()
         jsonDecoder.dateDecodingStrategy = .iso8601

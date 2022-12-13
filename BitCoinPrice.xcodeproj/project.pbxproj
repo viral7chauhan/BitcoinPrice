@@ -14,7 +14,7 @@
 		E09402592948910E00404CF0 /* ReadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09402582948910E00404CF0 /* ReadingView.swift */; };
 		E094025B294899A000404CF0 /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E094025A294899A000404CF0 /* TitleView.swift */; };
 		E094025E29489F0E00404CF0 /* Color+helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E094025D29489F0E00404CF0 /* Color+helpers.swift */; };
-		E09402602948AE8300404CF0 /* PriceFeedLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E094025F2948AE8300404CF0 /* PriceFeedLoader.swift */; };
+		E09402602948AE8300404CF0 /* ResourceLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E094025F2948AE8300404CF0 /* ResourceLoader.swift */; };
 		E09402622948B1BE00404CF0 /* PriceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09402612948B1BE00404CF0 /* PriceModel.swift */; };
 		E09402642948B48600404CF0 /* PriceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09402632948B48600404CF0 /* PriceViewModel.swift */; };
 		E09402692948FDBB00404CF0 /* PriceMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09402682948FDBB00404CF0 /* PriceMapper.swift */; };
@@ -33,7 +33,7 @@
 		E09402582948910E00404CF0 /* ReadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingView.swift; sourceTree = "<group>"; };
 		E094025A294899A000404CF0 /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
 		E094025D29489F0E00404CF0 /* Color+helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+helpers.swift"; sourceTree = "<group>"; };
-		E094025F2948AE8300404CF0 /* PriceFeedLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceFeedLoader.swift; sourceTree = "<group>"; };
+		E094025F2948AE8300404CF0 /* ResourceLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceLoader.swift; sourceTree = "<group>"; };
 		E09402612948B1BE00404CF0 /* PriceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceModel.swift; sourceTree = "<group>"; };
 		E09402632948B48600404CF0 /* PriceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceViewModel.swift; sourceTree = "<group>"; };
 		E09402682948FDBB00404CF0 /* PriceMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceMapper.swift; sourceTree = "<group>"; };
@@ -133,7 +133,7 @@
 		E09402672948FC7500404CF0 /* API */ = {
 			isa = PBXGroup;
 			children = (
-				E094025F2948AE8300404CF0 /* PriceFeedLoader.swift */,
+				E094025F2948AE8300404CF0 /* ResourceLoader.swift */,
 				E09402682948FDBB00404CF0 /* PriceMapper.swift */,
 			);
 			path = API;
@@ -228,7 +228,7 @@
 				E09402622948B1BE00404CF0 /* PriceModel.swift in Sources */,
 				E09402692948FDBB00404CF0 /* PriceMapper.swift in Sources */,
 				E094026D294906B500404CF0 /* HTTPClient.swift in Sources */,
-				E09402602948AE8300404CF0 /* PriceFeedLoader.swift in Sources */,
+				E09402602948AE8300404CF0 /* ResourceLoader.swift in Sources */,
 				E09402642948B48600404CF0 /* PriceViewModel.swift in Sources */,
 				E094025E29489F0E00404CF0 /* Color+helpers.swift in Sources */,
 			);

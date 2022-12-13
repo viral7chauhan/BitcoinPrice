@@ -13,7 +13,7 @@ final class PriceViewModel: ObservableObject {
     @Published var price: String = ""
 
     private var priceModel: Response?
-    private let loader: PriceFeedLoader
+    private let loader: ResourceLoader<Response>
 
     private var valueFormatter: NumberFormatter = {
         let formatter = NumberFormatter()
@@ -22,7 +22,7 @@ final class PriceViewModel: ObservableObject {
         return formatter
     }()
     
-    init(loader: PriceFeedLoader) {
+    init(loader: ResourceLoader<Response>) {
         self.loader = loader
     }
 
@@ -32,7 +32,7 @@ final class PriceViewModel: ObservableObject {
         isLoading = true
         // Helper method to see actual request hit, it's add 3s delay
         // try! await Task.sleep(until: .now + .seconds(3), clock: .continuous)
-        priceModel = await loader.loadPrice()
+        priceModel = await loader.loadResource()
         price = priceInString ?? ""
         isLoading = false
         log("Loading End")

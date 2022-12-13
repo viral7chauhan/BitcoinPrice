@@ -7,24 +7,24 @@
 
 import Foundation
 
-final class PriceFeedLoader {
-    let url: URL
-    let client: HTTPClient
+final class ResourceLoader<T> {
+    typealias Mapper = (Data, URLResponse) throws -> T
 
-    enum Error: Swift.Error {
-        case invalidData
-    }
+    private let url: URL
+    private let client: HTTPClient
+    private let mapper: Mapper
 
-    init(url: URL, client: HTTPClient) {
+    init(url: URL, client: HTTPClient, mapper: @escaping Mapper) {
         self.url = url
         self.client = client
+        self.mapper = mapper
     }
 
-    func loadPrice() async -> Response? {
+    func loadResource() async -> T? {
         do {
             let result = try await client.get(url)
             let (data, response) = try result.get()
-            return try PriceMapper.map(data, from: response)
+            return try mapper(data, response)
         } catch {
             // handle extra network error and domain error here
             print(error.localizedDescription)

@@ -37,12 +37,6 @@ struct PriceView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        let url = URL(string: "https://api.coindesk.com/v1/bpi/currentprice.json")!
-
-        let viewModel = PriceViewModel(
-            loader: PriceFeedLoader(url: url, client: URLSessionClient(session: .shared))
-        )
-
-        PriceView(viewModel: viewModel)
+        BitCoinPriceApp.makeContentView()
     }
 }
