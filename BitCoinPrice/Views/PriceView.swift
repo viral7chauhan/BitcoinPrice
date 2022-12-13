@@ -12,7 +12,8 @@ struct PriceView: View {
 
     var body: some View {
         ZStack {
-            Color.backgroundColor.ignoresSafeArea()
+            Color
+                .backgroundColor.ignoresSafeArea()
             VStack(spacing: 100) {
                 TitleView(isLoading: viewModel.isLoading)
 

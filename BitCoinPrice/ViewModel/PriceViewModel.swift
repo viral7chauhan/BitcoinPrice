@@ -28,11 +28,14 @@ final class PriceViewModel: ObservableObject {
 
     @MainActor
     func loadPrice() async {
+        log("Loading Start")
         isLoading = true
-        try! await Task.sleep(until: .now + .seconds(3), clock: .continuous)
+        // Helper method to see actual request hit, it's add 3s delay
+        // try! await Task.sleep(until: .now + .seconds(3), clock: .continuous)
         priceModel = await loader.loadPrice()
         price = priceInString ?? ""
         isLoading = false
+        log("Loading End")
     }
 
     // MARK: - Helpers

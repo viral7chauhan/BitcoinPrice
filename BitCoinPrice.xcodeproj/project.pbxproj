@@ -21,6 +21,7 @@
 		E094026D294906B500404CF0 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E094026C294906B400404CF0 /* HTTPClient.swift */; };
 		E094026F294906DE00404CF0 /* URLSessionClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E094026E294906DE00404CF0 /* URLSessionClient.swift */; };
 		E094027229490DB000404CF0 /* RefreshButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E094027129490DB000404CF0 /* RefreshButtonView.swift */; };
+		E0940274294913F800404CF0 /* Log+helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0940273294913F800404CF0 /* Log+helper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		E094026C294906B400404CF0 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		E094026E294906DE00404CF0 /* URLSessionClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionClient.swift; sourceTree = "<group>"; };
 		E094027129490DB000404CF0 /* RefreshButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshButtonView.swift; sourceTree = "<group>"; };
+		E0940273294913F800404CF0 /* Log+helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Log+helper.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				E094025D29489F0E00404CF0 /* Color+helpers.swift */,
+				E0940273294913F800404CF0 /* Log+helper.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -218,6 +221,7 @@
 				E09402592948910E00404CF0 /* ReadingView.swift in Sources */,
 				E094027229490DB000404CF0 /* RefreshButtonView.swift in Sources */,
 				E094024C2948905500404CF0 /* PriceView.swift in Sources */,
+				E0940274294913F800404CF0 /* Log+helper.swift in Sources */,
 				E094024A2948905500404CF0 /* BitCoinPriceApp.swift in Sources */,
 				E094026F294906DE00404CF0 /* URLSessionClient.swift in Sources */,
 				E094025B294899A000404CF0 /* TitleView.swift in Sources */,

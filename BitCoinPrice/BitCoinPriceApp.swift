@@ -15,6 +15,7 @@ struct BitCoinPriceApp: App {
         }
     }
 
+    // Compose view by its depedency
     func makeContentView() -> PriceView {
         let url = URL(string: "https://api.coindesk.com/v1/bpi/currentprice.json")!
         

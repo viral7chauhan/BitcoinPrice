@@ -14,7 +14,7 @@ struct RefreshButtonView: View {
 
     var body: some View {
         Button {
-            print("Refresh Clicked")
+            log("Refresh Clicked")
             action()
         } label: {
             Text("Refresh Price")
