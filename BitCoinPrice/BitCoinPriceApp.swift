@@ -19,10 +19,11 @@ struct BitCoinPriceApp: App {
     static func makeContentView() -> PriceView {
         let url = URL(string: "https://api.coindesk.com/v1/bpi/currentprice.json")!
 
-
         let viewModel = PriceViewModel(
-            loader: ResourceLoader<Response>(url: url, client: URLSessionClient(session: .shared),
-                                              mapper: PriceMapper.map)
+            loader: ResourceLoader<Response>(
+                url: url,
+                client: URLSessionClient(session: .shared),
+                mapper: PriceMapper.map)
         )
 
         return PriceView(viewModel: viewModel)
