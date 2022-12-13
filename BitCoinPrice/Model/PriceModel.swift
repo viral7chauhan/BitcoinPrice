@@ -17,7 +17,7 @@ struct Response: Codable {
 
 // MARK: - Bpi
 struct Bpi: Codable {
-    let usd, gbp, eur: Eur
+    let usd, gbp, eur: Currency
 
     enum CodingKeys: String, CodingKey {
         case usd = "USD"
@@ -27,7 +27,7 @@ struct Bpi: Codable {
 }
 
 // MARK: - Eur
-struct Eur: Codable {
+struct Currency: Codable {
     let code, symbol, rate, eurDescription: String
     let rateFloat: Double
 
