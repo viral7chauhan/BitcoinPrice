@@ -8,29 +8,35 @@
 
 /* Begin PBXBuildFile section */
 		E094024A2948905500404CF0 /* BitCoinPriceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09402492948905500404CF0 /* BitCoinPriceApp.swift */; };
-		E094024C2948905500404CF0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E094024B2948905500404CF0 /* ContentView.swift */; };
+		E094024C2948905500404CF0 /* PriceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E094024B2948905500404CF0 /* PriceView.swift */; };
 		E094024E2948905600404CF0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E094024D2948905600404CF0 /* Assets.xcassets */; };
 		E09402512948905600404CF0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E09402502948905600404CF0 /* Preview Assets.xcassets */; };
 		E09402592948910E00404CF0 /* ReadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09402582948910E00404CF0 /* ReadingView.swift */; };
 		E094025B294899A000404CF0 /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E094025A294899A000404CF0 /* TitleView.swift */; };
 		E094025E29489F0E00404CF0 /* Color+helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E094025D29489F0E00404CF0 /* Color+helpers.swift */; };
-		E09402602948AE8300404CF0 /* PriceLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E094025F2948AE8300404CF0 /* PriceLoader.swift */; };
+		E09402602948AE8300404CF0 /* PriceFeedLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E094025F2948AE8300404CF0 /* PriceFeedLoader.swift */; };
 		E09402622948B1BE00404CF0 /* PriceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09402612948B1BE00404CF0 /* PriceModel.swift */; };
 		E09402642948B48600404CF0 /* PriceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09402632948B48600404CF0 /* PriceViewModel.swift */; };
+		E09402692948FDBB00404CF0 /* PriceMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09402682948FDBB00404CF0 /* PriceMapper.swift */; };
+		E094026D294906B500404CF0 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E094026C294906B400404CF0 /* HTTPClient.swift */; };
+		E094026F294906DE00404CF0 /* URLSessionClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E094026E294906DE00404CF0 /* URLSessionClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E09402462948905500404CF0 /* BitCoinPrice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BitCoinPrice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E09402492948905500404CF0 /* BitCoinPriceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitCoinPriceApp.swift; sourceTree = "<group>"; };
-		E094024B2948905500404CF0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E094024B2948905500404CF0 /* PriceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceView.swift; sourceTree = "<group>"; };
 		E094024D2948905600404CF0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E09402502948905600404CF0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E09402582948910E00404CF0 /* ReadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingView.swift; sourceTree = "<group>"; };
 		E094025A294899A000404CF0 /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
 		E094025D29489F0E00404CF0 /* Color+helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+helpers.swift"; sourceTree = "<group>"; };
-		E094025F2948AE8300404CF0 /* PriceLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceLoader.swift; sourceTree = "<group>"; };
+		E094025F2948AE8300404CF0 /* PriceFeedLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceFeedLoader.swift; sourceTree = "<group>"; };
 		E09402612948B1BE00404CF0 /* PriceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceModel.swift; sourceTree = "<group>"; };
 		E09402632948B48600404CF0 /* PriceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceViewModel.swift; sourceTree = "<group>"; };
+		E09402682948FDBB00404CF0 /* PriceMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceMapper.swift; sourceTree = "<group>"; };
+		E094026C294906B400404CF0 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
+		E094026E294906DE00404CF0 /* URLSessionClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,14 +69,15 @@
 		E09402482948905500404CF0 /* BitCoinPrice */ = {
 			isa = PBXGroup;
 			children = (
-				E09402632948B48600404CF0 /* PriceViewModel.swift */,
-				E094025F2948AE8300404CF0 /* PriceLoader.swift */,
+				E0940270294906ED00404CF0 /* Network Infra */,
+				E09402672948FC7500404CF0 /* API */,
+				E09402662948FC6800404CF0 /* ViewModel */,
+				E09402652948FC5A00404CF0 /* Model */,
 				E094025C29489EFE00404CF0 /* Extensions */,
 				E0940257294890FB00404CF0 /* Views */,
 				E09402492948905500404CF0 /* BitCoinPriceApp.swift */,
 				E094024D2948905600404CF0 /* Assets.xcassets */,
 				E094024F2948905600404CF0 /* Preview Content */,
-				E09402612948B1BE00404CF0 /* PriceModel.swift */,
 			);
 			path = BitCoinPrice;
 			sourceTree = "<group>";
@@ -86,7 +93,7 @@
 		E0940257294890FB00404CF0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				E094024B2948905500404CF0 /* ContentView.swift */,
+				E094024B2948905500404CF0 /* PriceView.swift */,
 				E09402582948910E00404CF0 /* ReadingView.swift */,
 				E094025A294899A000404CF0 /* TitleView.swift */,
 			);
@@ -99,6 +106,40 @@
 				E094025D29489F0E00404CF0 /* Color+helpers.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E09402652948FC5A00404CF0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E09402612948B1BE00404CF0 /* PriceModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E09402662948FC6800404CF0 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E09402632948B48600404CF0 /* PriceViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E09402672948FC7500404CF0 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				E094025F2948AE8300404CF0 /* PriceFeedLoader.swift */,
+				E09402682948FDBB00404CF0 /* PriceMapper.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		E0940270294906ED00404CF0 /* Network Infra */ = {
+			isa = PBXGroup;
+			children = (
+				E094026C294906B400404CF0 /* HTTPClient.swift */,
+				E094026E294906DE00404CF0 /* URLSessionClient.swift */,
+			);
+			path = "Network Infra";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -172,11 +213,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				E09402592948910E00404CF0 /* ReadingView.swift in Sources */,
-				E094024C2948905500404CF0 /* ContentView.swift in Sources */,
+				E094024C2948905500404CF0 /* PriceView.swift in Sources */,
 				E094024A2948905500404CF0 /* BitCoinPriceApp.swift in Sources */,
+				E094026F294906DE00404CF0 /* URLSessionClient.swift in Sources */,
 				E094025B294899A000404CF0 /* TitleView.swift in Sources */,
 				E09402622948B1BE00404CF0 /* PriceModel.swift in Sources */,
-				E09402602948AE8300404CF0 /* PriceLoader.swift in Sources */,
+				E09402692948FDBB00404CF0 /* PriceMapper.swift in Sources */,
+				E094026D294906B500404CF0 /* HTTPClient.swift in Sources */,
+				E09402602948AE8300404CF0 /* PriceFeedLoader.swift in Sources */,
 				E09402642948B48600404CF0 /* PriceViewModel.swift in Sources */,
 				E094025E29489F0E00404CF0 /* Color+helpers.swift in Sources */,
 			);

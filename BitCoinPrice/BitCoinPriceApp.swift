@@ -11,7 +11,17 @@ import SwiftUI
 struct BitCoinPriceApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            makeContentView()
         }
+    }
+
+    func makeContentView() -> PriceView {
+        let url = URL(string: "https://api.coindesk.com/v1/bpi/currentprice.json")!
+        
+        let viewModel = PriceViewModel(
+            loader: PriceFeedLoader(url: url, client: URLSessionClient(session: .shared))
+        )
+
+        return PriceView(viewModel: viewModel)
     }
 }

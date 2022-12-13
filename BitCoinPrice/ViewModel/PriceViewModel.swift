@@ -8,12 +8,12 @@
 import Foundation
 
 final class PriceViewModel: ObservableObject {
-    private var priceModel: Response?
 
     @Published var isLoading = false
     @Published var price: String = ""
 
-    private let loader: PriceLoader
+    private var priceModel: Response?
+    private let loader: PriceFeedLoader
 
     private var valueFormatter: NumberFormatter = {
         let formatter = NumberFormatter()
@@ -22,7 +22,7 @@ final class PriceViewModel: ObservableObject {
         return formatter
     }()
     
-    init(loader: PriceLoader) {
+    init(loader: PriceFeedLoader) {
         self.loader = loader
     }
 
@@ -34,6 +34,7 @@ final class PriceViewModel: ObservableObject {
         isLoading = false
     }
 
+    // MARK: - Helpers
     private var priceInString: String? {
         guard let value = priceModel?.bpi.usd.rateFloat else {
             return nil
