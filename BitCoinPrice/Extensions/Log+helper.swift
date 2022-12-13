@@ -7,7 +7,7 @@
 
 import Foundation
 
-func log(_ s: Any, line: Int = #line) {
-    let fileName = (#file as NSString).lastPathComponent
+func log(_ s: Any, file: String = #file, line: Int = #line) {
+    let fileName = (file as NSString).lastPathComponent
     print("\(fileName) > line: \(line)", s)
 }
