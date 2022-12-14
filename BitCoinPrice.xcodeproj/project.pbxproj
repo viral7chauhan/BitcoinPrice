@@ -97,10 +97,8 @@
 		E0940257294890FB00404CF0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				E094027529491C4100404CF0 /* ChildViews */,
 				E094024B2948905500404CF0 /* PriceView.swift */,
-				E09402582948910E00404CF0 /* ReadingView.swift */,
-				E094025A294899A000404CF0 /* TitleView.swift */,
-				E094027129490DB000404CF0 /* RefreshButtonView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -146,6 +144,16 @@
 				E094026E294906DE00404CF0 /* URLSessionClient.swift */,
 			);
 			path = "Network Infra";
+			sourceTree = "<group>";
+		};
+		E094027529491C4100404CF0 /* ChildViews */ = {
+			isa = PBXGroup;
+			children = (
+				E09402582948910E00404CF0 /* ReadingView.swift */,
+				E094025A294899A000404CF0 /* TitleView.swift */,
+				E094027129490DB000404CF0 /* RefreshButtonView.swift */,
+			);
+			path = ChildViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
